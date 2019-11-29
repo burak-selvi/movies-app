@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Header } from './components/Header';
+import { Main } from './components/Main';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Navbar</h1>
-      <h1>Main</h1>
+      <Header />
+      <Main />
     </div>
   );
 }
