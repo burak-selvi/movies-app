@@ -1,10 +1,21 @@
 import React from 'react'
-import Genre from './Genre';
 
-export default function GenreList() {
+export default function GenreList(props) {
+  const { genres, onItemSelect, selectedItem } = props;
   return (
-    <div>
-      <Genre />
-    </div>
+    <ul className="list-group">
+      {
+        genres.map(genre => {
+          return (
+            <li
+              key={genre._id}
+              onClick={() => onItemSelect(genre)}
+              className={genre === selectedItem ? "list-group-item active" : "list-group-item"}>
+              {genre.name}
+            </li>
+          )
+        })
+      }
+    </ul>
   )
 }

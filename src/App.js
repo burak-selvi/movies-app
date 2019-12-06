@@ -1,12 +1,11 @@
 import React from 'react';
-import { Header } from './components/Header';
-import { Main } from './components/Main';
+import { Header, Main } from './components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Main />
     </div>
